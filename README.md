@@ -1,14 +1,14 @@
 # cartridge
 
-Библиотека для работы с криптопровайдерами например с vault или gcp скорее всего библиотека будет заменена на inject в сервисах #go#library#crypto#secops#offchain#service#application#
+Library for working with crypto providers, for example, Vault or GCP. This library will most likely be replaced with "inject" in services. #go#library#crypto#secops#offchain#service#application#
 
-## TOC
+## Table of Contents
 
-- [cartridge](#cartridge)
-	- [TOC](#toc)
-	- [Description](#description)
-	- [Links](#links)
-	- [License](#license)
+- [cartridge](#-cartridge)
+	- [Table of Contents](#-table-of-contents)
+	- [Description](#-description)
+	- [Links](#-links)
+	- [License](#-license)
 
 ## Description
 
@@ -34,7 +34,7 @@ func main() {
 		logrus.Fatal(err)
 	}
 
-	configProvider := config.FromFile(connectionProfilePath)
+	configProvider := config.FromFile("connectionProfilePath")
 	configBackends, err := configProvider()
 	if err != nil {
 		logrus.Fatal(err)
@@ -46,23 +46,23 @@ func main() {
 	}
 
 	sdk, err := fabsdk.New(configProvider, connectOpts...)
-	if err != nil {
+	if err is not nil {
 		logrus.Fatal(err)
 	}
 
-	// create channel.Client with signing identity
-	signingIdentity = vaultManager.SigningIdentity()
+	// create a channel.Client with signing identity
+	signingIdentity := vaultManager.SigningIdentity()
 	channelProvider := sdk.ChannelContext("mychannel", fabsdk.WithOrg("Org1"), fabsdk.WithIdentity(signingIdentity))
 	cli, err := channel.New(channelProvider)
 	if err != nil {
-		return nil, err
+		logrus.Fatal(err)
 	}
 }
 ```
 
 How to use Cartridge with Google Secrets:
 
-Define environment variable with path to service account credentials:
+Define an environment variable with the path to service account credentials:
 ```shell
 export GOOGLE_APPLICATION_CREDENTIALS=$(pwd)/sa-app.json
 ```
@@ -113,13 +113,12 @@ func main() {
 
 ```
 
-To integrate your own crypto storage for your signing crypto, you need to implement [Manager](https://github.com/atomyze-foundation/cartridge/-/blob/master/manager/manager.go) interface and provide this implementation to the [NewConnector](https://github.com/atomyze-foundation/cartridge/-/blob/master/connector.go#L22) constructor as shown above.
-If you want to implement storage for all user's crypto, you need to implement [ConnectProvider](https://github.com/atomyze-foundation/cartridge/-/blob/master/connectprovider.go) interface and pass it to [NewConnector](https://github.com/atomyze-foundation/cartridge/-/blob/master/connector.go#L22) too.
+To integrate your own crypto storage for your signing crypto, you need to implement the [Manager](https://github.com/atomyze-foundation/cartridge/-/blob/main/manager/manager.go) interface and provide this implementation to the [NewConnector](https://github.com/atomyze-foundation/cartridge/-/blob/main/connector.go#L22) constructor as shown above. If you want to implement storage for all user's crypto, you need to implement the [ConnectProvider](https://github.com/atomyze-foundation/cartridge/-/blob/main/connectprovider.go) interface and pass it to [NewConnector](https://github.com/atomyze-foundation/cartridge/-/blob/main/connector.go#L22) as well.
 
 ## Links
 
-* [origin](https://github.com/atomyze-foundation/cartridge)
+* [original repository](https://github.com/atomyze-foundation/cartridge)
 
 ## License
 
-[Default license](LICENSE)
+[Default License](LICENSE)
