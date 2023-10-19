@@ -9,9 +9,9 @@ package cartridge
 import (
 	"errors"
 
-	"github.com/hyperledger/fabric-sdk-go/pkg/fabsdk"
 	"github.com/atomyze-foundation/cartridge/cryptocache"
 	"github.com/atomyze-foundation/cartridge/manager"
+	"github.com/hyperledger/fabric-sdk-go/pkg/fabsdk"
 )
 
 // Connector holds all necessary data (endpoints, certs) for connecting to HLF network.

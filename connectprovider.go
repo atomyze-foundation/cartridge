@@ -7,9 +7,9 @@ SPDX-License-Identifier: [Default license](LICENSE)
 package cartridge
 
 import (
+	"github.com/atomyze-foundation/cartridge/cryptocache"
 	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/fab"
 	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/msp"
-	"github.com/atomyze-foundation/cartridge/cryptocache"
 )
 
 // ConnectProvider provides all necessary data (endpoints, certs) for connecting to HLF network.

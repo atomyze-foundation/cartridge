@@ -18,9 +18,9 @@ import (
 	"hash"
 	"sync"
 
+	"github.com/atomyze-foundation/cartridge/manager"
 	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/core"
 	"github.com/hyperledger/fabric/bccsp/utils"
-	"github.com/atomyze-foundation/cartridge/manager"
 )
 
 // NewCartridgeCryptoSuite returns cryptosuite adaptor for Signer

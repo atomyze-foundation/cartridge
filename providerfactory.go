@@ -7,13 +7,13 @@ SPDX-License-Identifier: [Default license](LICENSE)
 package cartridge
 
 import (
+	"github.com/atomyze-foundation/cartridge/manager"
 	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/core"
 	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/fab"
 	"github.com/hyperledger/fabric-sdk-go/pkg/core/logging/api"
 	"github.com/hyperledger/fabric-sdk-go/pkg/core/logging/modlog"
 	signingMgr "github.com/hyperledger/fabric-sdk-go/pkg/fab/signingmgr"
 	"github.com/hyperledger/fabric-sdk-go/pkg/fabsdk/provider/fabpvdr"
-	"github.com/atomyze-foundation/cartridge/manager"
 )
 
 // ProviderFactory represents the default SDK provider factory.
