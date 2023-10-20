@@ -17,6 +17,7 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/atomyze-foundation/cartridge/cryptocache"
 	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/core"
 	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/msp"
 	commtls "github.com/hyperledger/fabric-sdk-go/pkg/core/config/comm/tls"
@@ -25,7 +26,6 @@ import (
 	fabImpl "github.com/hyperledger/fabric-sdk-go/pkg/fab"
 	"github.com/hyperledger/fabric-sdk-go/pkg/util/pathvar"
 	"github.com/pkg/errors"
-	"github.com/atomyze-foundation/cartridge/cryptocache"
 )
 
 var (

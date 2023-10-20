@@ -17,6 +17,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/atomyze-foundation/cartridge/cryptocache"
 	"github.com/hyperledger/fabric-sdk-go/pkg/common/errors/multi"
 	"github.com/hyperledger/fabric-sdk-go/pkg/common/errors/retry"
 	"github.com/hyperledger/fabric-sdk-go/pkg/common/errors/status"
@@ -31,7 +32,6 @@ import (
 	"github.com/hyperledger/fabric-sdk-go/pkg/util/pathvar"
 	"github.com/mitchellh/mapstructure"
 	"github.com/pkg/errors"
-	"github.com/atomyze-foundation/cartridge/cryptocache"
 	grpcCodes "google.golang.org/grpc/codes"
 )
 

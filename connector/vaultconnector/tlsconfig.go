@@ -15,8 +15,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/pkg/errors"
 	"github.com/atomyze-foundation/cartridge/cryptocache"
+	"github.com/pkg/errors"
 )
 
 // IsTLSEnabled is a generic function that expects a URL and verifies if it has

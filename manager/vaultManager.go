@@ -9,9 +9,9 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/atomyze-foundation/cartridge/cryptocache"
 	vault "github.com/hashicorp/vault/api"
 	"github.com/hyperledger/fabric/bccsp/utils"
-	"github.com/atomyze-foundation/cartridge/cryptocache"
 )
 
 type Option func(c *VaultManager) error
